@@ -1,0 +1,43 @@
+﻿{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/symbols",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": "5001"
+                }
+            ],
+            "UpstreamPathTemplate": "/symbols",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/latest",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": "5001"
+                }
+            ],
+            "UpstreamPathTemplate": "/latest",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/convert",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": "5002"
+                }
+            ],
+            "UpstreamPathTemplate": "/convert",
+            "UpstreamHttpMethod": [ "GET" ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5010"
+    }
+}
